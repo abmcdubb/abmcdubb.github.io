@@ -1,0 +1,164 @@
+@import "normalize";
+@import "../bower_components/susy/sass/susy";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+$light-grey: #CDDDE0;
+$dark-green: #374F33;
+$medium-grey: #7C859B;
+$grey: #CCC;
+
+$susy: (
+  columns: 12,
+  gutters: 0.25,
+  global-box-sizing: border-box,
+  debug: (image: show-columns)
+  );
+body {
+  color: $dark-green;
+  a {
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+     text-decoration: underline;
+    }
+  }
+}
+
+// HOME PAGE
+.home-page .main-image {
+  background: url("../images/main.jpg") no-repeat center center;
+  -webkit-background-size: cover; //fix this!
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+}
+.navbar {
+  @include span(12);
+  height: 76px;
+  margin-bottom: 116px;
+  background: $grey; // might change
+  opacity: 0.8; // might change
+  color: $medium-grey;
+}
+.logo{
+  @include span(6 of 12);
+  font-size: 26pt;
+  margin-left: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navlinks {
+  @include span(5 of 12 last);
+  font-size: 16pt;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  .about, .projects, .blog {
+    display: inline-block;
+    margin-right: 50px;
+  }
+}
+.main-text {
+  margin-left: 25%;
+  margin-right: 25%; // might change
+  margin-bottom: 50px;
+  padding-top: 25%;
+  font-size: 17pt; // might change
+  &.blog {
+    margin-left: 10%;
+  }
+}
+.buttons {
+  margin-left: 25%;
+  font-size: 10pt;
+  letter-spacing: .40pt;
+  .email-me, .github {
+    background: $dark-green; // put in variable
+    opacity: 0.5;
+    display: inline-block;
+    color: #CCC;
+    height: 32px;
+    border-radius: 25px;
+  }
+  .email-me {
+    width: 176px;
+    margin-right: 75px;
+  }
+  .github {
+    width: 200px;
+  }
+  .email-me-text, .github-text {
+    color: white;
+    line-height: 32px;
+  }
+  .email-me-text {
+    margin-left: 20px;
+  }
+  .github-text {
+    margin-left: 17px;
+  }
+}
+.recent-work {
+  padding: 50px 55px 0 55px;
+  height: 400px;
+  .section-title {
+    font-size: 17pt;
+  }
+  .projects {
+    margin-top: 50px;
+  }
+  .project-1, .project-2, .project-3, .project-4 {
+    .screenshot {
+      height: 234px;
+      border: 2px solid $light-grey;
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+    }
+    .description {
+      background-color: $light-grey;
+      height: 83px;
+      font-size: 10pt;
+      padding: 20px 10px;
+    }
+  }
+  .project-1 {
+    @include span(3 at 3 of 12);
+  }
+  .project-2 {
+    @include span(3 at 3 of 12);
+    // margin-right: 30px;
+  }
+  .project-3 {
+    @include span(3 at 6 of 12);
+  }
+  .project-4 {
+    @include span(3 at 9 of 12 last);
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: $light-grey;
+  height: 50px;
+}
+
+// BLOG PAGE
+.blog-page .main-image {
+  background: url("../images/wip.jpg") no-repeat center center;
+  -webkit-background-size: cover; //fix this!
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+}
+
+.blog-page .main-text {
+  margin-left: 10%;
+  padding-top: 10%;
+}

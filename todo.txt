@@ -1,0 +1,13 @@
+todo.txt
+- Find out font
+- Determine what to do when hovering links
+- Make mobile friendly
+- Allow nav bar to move with scroll
+- Allow for side scroll for projects section
+- Allow for click to expand image for project section
+- Make projects section feel less crowded
+- Add social media sites
+- Get logo
+- Add favicon
+- Complete / figure out blog site
+- Slow scroll when switching sections
