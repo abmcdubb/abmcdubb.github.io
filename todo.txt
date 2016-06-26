@@ -6,8 +6,9 @@ todo.txt
 - Allow for side scroll for projects section
 - Allow for click to expand image for project section
 - Make projects section feel less crowded
-- Add social media sites
-- Get logo
 - Add favicon
-- Complete / figure out blog site
+- Complete / figure out blog page
 - Slow scroll when switching sections
+- add tool tips
+- reconsider hover opacity
+- discuss with jane
