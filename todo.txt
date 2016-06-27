@@ -12,3 +12,5 @@ todo.txt
 - add tool tips
 - reconsider hover opacity
 - discuss with jane
+- force pictures to load before text
+- cache assets

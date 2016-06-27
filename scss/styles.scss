@@ -50,6 +50,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: $medium-grey;
+  a {
+    color: $medium-grey;
+  }
 }
 .navlinks {
   @include span(5 of 12 last);
