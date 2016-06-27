@@ -60,7 +60,9 @@ body {
   .about, .projects, .blog {
     display: inline-block;
     margin-right: 50px;
-    color: $medium-grey;
+    a {
+      color: $medium-grey;
+    }
   }
 }
 .main-text {
