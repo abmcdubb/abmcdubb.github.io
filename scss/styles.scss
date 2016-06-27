@@ -39,9 +39,8 @@ body {
   @include span(12);
   height: 76px;
   margin-bottom: 116px;
-  background: $grey; // might change
-  opacity: 0.8; // might change
-  color: $medium-grey;
+  background: $grey;
+  opacity: 0.7;
 }
 .logo{
   @include span(6 of 12);
@@ -50,6 +49,7 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  color: $medium-grey;
 }
 .navlinks {
   @include span(5 of 12 last);
@@ -60,6 +60,7 @@ body {
   .about, .projects, .blog {
     display: inline-block;
     margin-right: 50px;
+    color: $medium-grey;
   }
 }
 .main-text {
