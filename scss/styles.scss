@@ -5,7 +5,7 @@
 $light-grey: #CDDDE0;
 $dark-green: #374F33;
 $medium-grey: #7C859B;
-$grey: #CCC;
+$white: #FFFFFF;
 
 $susy: (
   columns: 12,
@@ -15,6 +15,7 @@ $susy: (
   );
 body {
   color: $dark-green;
+  font-family: Lato;
   a {
     text-decoration: none;
     &:visited {
@@ -39,7 +40,7 @@ body {
   @include span(12);
   height: 76px;
   margin-bottom: 116px;
-  background: $grey;
+  background: $white;
   opacity: 0.7;
 }
 .logo{
@@ -62,7 +63,7 @@ body {
   transform: translateY(-50%);
   .about, .projects, .blog {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 60px;
     a {
       color: $medium-grey;
     }
@@ -155,10 +156,11 @@ body {
     @include span(3 at 9 of 12 last);
   }
 }
-
+.footer-divider {
+  margin-left: 55px;
+  margin-right: 55px;
+}
 .footer {
-  background-color: $light-grey;
-  color: white;
   height: 75px;
   .copyright span {
     line-height: 75px;
