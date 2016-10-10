@@ -4,35 +4,37 @@
   <meta charset="UTF-8">
   <title>Alisha McWilliams dot com</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="bower_components/textillate/assets/animate.css">
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="bower_components/textillate/assets/jquery.lettering.js"></script>
+  <script type="text/javascript" src="bower_components/textillate/jquery.textillate.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
 </head>
   <body class="home-page">
+    <div class="preloading">
+      <div class="loading-text">Loading ...</div>
+    </div>
     <div class="main-image">
       <div class="navbar">
         <div class="logo">
           <a name="blog" href="./index.html">ALISHA B. MCWILLIAMS</a>
         </div>
-        <div class="navlinks">
-          <div class="about">
-            <a name="about" href="#main-text">About</a>
-          </div>
-          <div class="projects">
-            <a name "projects" href="#projects">Projects</a>
-          </div>
-          <div class="blog">
-            <a name="blog" href="./blog.html">Blog</a>
-          </div>
+        <div class="navlinks show-after-load">
+          <div class="about navlink"><a name="about" href="#main-text">About</a></div>
+          <div class="projects navlink"><a name "projects" href="#projects">Projects</a></div>
+          <div class="blog navlink"><a name="blog" href="./blog.html">Blog</a></div>
         </div>
       </div>
       <div class="main">
-        <div class="main-text">
-          <a name="main-text"></a>
-          Alisha McWilliams is Brooklyn-based Ruby on Rails developer currently working at CipherHealth.
-          <br><br>
-          She is also an amateur jewelry maker, sloth enthusiast, photographer, frequent traveler, and weekend volunteer. She is constantly working to turn her black thumb green, one dead houseplant at a time.
-          <br><br>
+        <div class="main-text show-after-load">
+          <p class="introduction-text1">Alisha McWilliams is Brooklyn-based Ruby on Rails developer currently working at CipherHealth.</p>
+          <p class="introduction-text2">She is also an amateur jewelry maker, sloth enthusiast, photographer, frequent traveler, and weekend volunteer. She is constantly working to turn her black thumb green, one dead houseplant at a time.</p>
         </div>
-        <div class="buttons">
+        <div class="buttons show-after-load">
           <a href="mailto:abmcwilliams@gmail.com">
             <div class="email-me">
               <span class="email-me-text">SEND ME AN EMAIL</span>
@@ -46,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="recent-work">
+    <div class="recent-work show-after-load">
       <span class="section-title">Recent Work</span>
       <a name="projects"></a>
       <div class="projects">
@@ -102,7 +104,7 @@
         </div>
       </div>
     </div>
-    <hr class="footer-divider">
+    <hr class="footer-divider show-after-load">
     <div class="footer">
       <div class="copyright">
         <span>Created by Alisha B. McWilliams &copy; 2016</span>

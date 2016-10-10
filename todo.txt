@@ -14,3 +14,5 @@ todo.txt
 - discuss with jane
 - force pictures to load before text
 - cache assets
+
+- REMEMBER: http://loading.io/
