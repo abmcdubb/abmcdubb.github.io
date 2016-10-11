@@ -5,10 +5,14 @@
   <title>Alisha McWilliams dot com</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="bower_components/textillate/assets/animate.css">
+  <!-- replace animate -->
+  <link rel="stylesheet" href="bower_components/textillate/assets/animate.css"> 
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
 
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
   <script type="text/javascript" src="bower_components/textillate/assets/jquery.lettering.js"></script>
   <script type="text/javascript" src="bower_components/textillate/jquery.textillate.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
@@ -25,7 +29,7 @@
         </div>
         <div class="navlinks show-after-load">
           <div class="about navlink"><a name="about" href="#main-text">About</a></div>
-          <div class="projects navlink"><a name "projects" href="#projects">Projects</a></div>
+          <div class="nav-projects navlink"><a name "projects" href="#projects">Projects</a></div>
           <div class="blog navlink"><a name="blog" href="./blog.html">Blog</a></div>
         </div>
       </div>
@@ -51,51 +55,66 @@
     <div class="recent-work show-after-load">
       <span class="section-title">Recent Work</span>
       <a name="projects"></a>
+      <div class="project-descriptions">
+        <div class="description">
+          <p>
+            <a href="https://alishamcwilliams.com" target="_blank" class="site-name">alishamcwilliams.com</a> is my personal website, and a starting point for the lazier internet stalkers.
+          </p>
+          Designed by Jane Wang
+          <p>
+            <i>Built with HTML, SASS, and Susy</i>.
+          </p>
+        </div>
+        <div class="description">
+          <p>
+            <a href="https://github.com/abmcdubb/nyborhood" target="_blank" class="site-name">NYborhood</a> compiles New York City 311 data to compile relevant data on local buildings and neighborhoods.
+          </p>
+          <p>
+            <i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i>
+          </p>
+        </div>
+        <div class="description">
+          <p>
+            <a href="https://github.com/abmcdubb/troop_hub" target="_blank" class="site-name">Troophub</a> serves as a portal for Girl Scout troops to share and disseminate relevant data to troop members and parents.
+          </p>
+          <p>
+            <i>Built with Ruby on Rails, Postgres SQL, jQuery, and Twitter Bootstrap</i>.
+          </p>
+        </div>
+        <div class="description">
+          <p>
+            <a href="https://github.com/bokwon/berf" target="_blank" class="site-name">Berf</a> scans a user's Facebook friends and auto-sends celebratory texts on their birthday.
+          </p>
+          <p>
+            <i>Built with Ruby on Rails, Postgres SQL, Twilio, jQuery, and Twitter Bootstrap.</i>
+          </p>
+        </div>    
+      </div>
       <div class="projects">
-        <div class="project-1">
+        <div class="project">
           <div class="screenshot">
             <a href="https://alishamcwilliams.com" target="_blank">
               <img src="images/alishamcwilliamsdotcom_screenshot.png">
             </a>
           </div>
-          <div class="description">
-            <a href="https://alishamcwilliams.com" target="_blank">alishamcwilliams.com</a> is my personal website, and a starting point for the lazier internet stalkers.
-            <br><br>
-            Designed by Jane Wang
-            <br><br>
-            <i>Built with HTML, SASS, and Susy</i>.
-          </div>
+          
         </div>
-        <div class="project-2">
-          <div class="description">
-            <a href="https://github.com/abmcdubb/nyborhood" target="_blank">NYborhood</a> compiles New York City 311 data to compile relevant data on local buildings and neighborhoods.
-            <br><br>
-            <i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i>
-          </div>
+        <div class="project">       
           <div class="screenshot">
             <a href="https://github.com/abmcdubb/nyborhood" target="_blank">
               <img src="images/nyborhood_screenshot.png">
             </a>
           </div>
         </div>
-        <div class="project-3">
+        <div class="project">
           <div class="screenshot">
             <a href="https://github.com/abmcdubb/troop_hub" target="_blank">
               <img src="images/troophub_screenshot.png">
             </a>
           </div>
-          <div class="description">
-            <a href="https://github.com/abmcdubb/troop_hub" target="_blank">Troophub</a> serves as a portal for Girl Scout troops to share and disseminate relevant data to troop members and parents.
-            <br><br>
-            <i>Built with Ruby on Rails, Postgres SQL, jQuery, and Twitter Bootstrap</i> .
-          </div>
+          
         </div>
-        <div class="project-4">
-          <div class="description">
-            <a href="https://github.com/bokwon/berf" target="_blank">Berf</a> scans a user's Facebook friends and auto-sends celebratory texts on their birthday.
-            <br><br>
-            <i>Built with Ruby on Rails, Postgres SQL, Twilio, jQuery, and Twitter Bootstrap.</i>
-          </div>
+        <div class="project">
           <div class="screenshot">
             <a href="https://github.com/bokwon/berf" target="_blank">
               <img src="images/berf_screenshot.png">

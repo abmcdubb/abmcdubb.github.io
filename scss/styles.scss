@@ -78,7 +78,7 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  .about, .projects, .blog {
+  .navlink {
     display: inline-block;
     margin-right: 60px;
     a {
@@ -136,46 +136,53 @@ body {
   .section-title {
     font-size: 17pt;
   }
-  .projects {
+  .project-descriptions {
     margin-top: 50px;
+    .description {
+      text-align: center;
+    }
   }
-  .project-1, .project-2, .project-3, .project-4 {
+  .project {
     border-radius: 25%;
+    padding: 5px 15px;
+    &:hover {
+      -webkit-transform: scale(1.5); 
+      -ms-transform: scale(1.5); 
+      transform: scale(1.5);
+    }
     a {
       color: $dark-green;
     }
     .screenshot {
       height: 234px;
-      border: 2px solid $light-grey;
       overflow: hidden;
       img {
         height: 100%;
         opacity: 0.4;
-        &:hover {
-          opacity: 1;
-        }
       }
-
     }
-    .description {
-      background-color: $light-grey;
-      height: 93px;
-      font-size: 10pt;
-      padding: 20px 30px;
+    &.slick-current .screenshot img {
+      opacity: 1;
     }
+    // .description {
+    //   background-color: $light-grey;
+    //   height: 93px;
+    //   font-size: 10pt;
+    //   padding: 20px 30px;
+    // }
   }
-  .project-1 {
-    @include span(3 at 3 of 12);
-  }
-  .project-2 {
-    @include span(3 at 3 of 12);
-  }
-  .project-3 {
-    @include span(3 at 6 of 12);
-  }
-  .project-4 {
-    @include span(3 at 9 of 12 last);
-  }
+  // .project-1 {
+  //   @include span(3 at 3 of 12);
+  // }
+  // .project-2 {
+  //   @include span(3 at 3 of 12);
+  // }
+  // .project-3 {
+  //   @include span(3 at 6 of 12);
+  // }
+  // .project-4 {
+  //   @include span(3 at 9 of 12 last);
+  // }
 }
 .footer-divider {
   margin-left: 55px;
