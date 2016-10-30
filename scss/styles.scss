@@ -19,7 +19,7 @@ body {
   a {
     text-decoration: none;
     &:visited {
-      color: inherit;
+      color: inherit !important;
     }
     &:hover {
      text-decoration: none;
@@ -78,7 +78,7 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  .about, .projects, .blog {
+  .navlink {
     display: inline-block;
     margin-right: 60px;
     a {
@@ -130,51 +130,72 @@ body {
     margin-left: 17px;
   }
 }
+
 .recent-work {
-  padding: 50px 55px 100px 55px;
-  height: 400px;
+  margin: 50px 55px 22px 55px;
+  .previous-arrow, .next-arrow {
+    height: 40px;
+    position: absolute;
+    top: 47%;
+    z-index: 1;
+    display: block;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    animation: floating-arrow .5s ease-in-out 0s infinite alternate;
+    -moz-animation: floating-arrow .5s ease-in-out 0s infinite alternate;
+    -webkit-animation: floating-arrow .5s ease-in-out 0s infinite alternate;
+  }
+  .next-arrow {
+    right: 0px;
+  }
+  .projects .slick-track {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
   .section-title {
     font-size: 17pt;
   }
-  .projects {
-    margin-top: 50px;
-  }
-  .project-1, .project-2, .project-3, .project-4 {
-    border-radius: 25%;
-    a {
-      color: $dark-green;
+  .project-descriptions {
+    .description {
+      text-align: center;
+      font-size: 18px;
+      background-color: rgba(55, 79, 51, 0.4);
+      border-radius: 5px;
+      color: white;
+      a {
+        color: white;
+      }
     }
+
+  }
+  .project {
+    border-radius: 25%;
+    padding: 5px 15px;
+    transition-duration: .5s;
+    &.slick-center {
+      -webkit-transform: scale(1.5); 
+      -ms-transform: scale(1.5); 
+      transform: scale(1.5);
+      transition-duration: 1s;
+    }
+
     .screenshot {
       height: 234px;
-      border: 2px solid $light-grey;
       overflow: hidden;
       img {
         height: 100%;
-        opacity: 0.4;
-        &:hover {
-          opacity: 1;
-        }
+        opacity: 0.3;
       }
-
     }
-    .description {
-      background-color: $light-grey;
-      height: 93px;
-      font-size: 10pt;
-      padding: 20px 30px;
+    &.slick-current .screenshot img {
+      opacity: 1;
+      transition: opacity .1s ease-in-out;
     }
-  }
-  .project-1 {
-    @include span(3 at 3 of 12);
-  }
-  .project-2 {
-    @include span(3 at 3 of 12);
-  }
-  .project-3 {
-    @include span(3 at 6 of 12);
-  }
-  .project-4 {
-    @include span(3 at 9 of 12 last);
+    &.slick-active:not(.slick-current) .screenshot img {
+      position: relative;
+      z-index: -1;
+    }
   }
 }
 .footer-divider {
@@ -218,4 +239,17 @@ body {
 .blog-page .main-text {
   margin-left: 10%;
   padding-top: 10%;
+}
+// animations
+@-moz-keyframes floating-arrow {
+  from { transform: translate(0px,0px); }
+  to { transform: translate(0px,-2px); } 
+}
+@-webkit-keyframes floating-arrow {
+  from { transform: translate(0px,0px); }
+  to { transform: translate(0px,-2px); } 
+}
+@keyframes floating-arrow {
+  from { transform: translate(0px,0px); }
+  to { transform: translate(0px,-2px); } 
 }

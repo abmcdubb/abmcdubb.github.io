@@ -26,7 +26,7 @@ $(window).bind('load', function() {
     }
   })
 
-  $('.navlink, .logo').hover(function() {
+  $('.navlink').hover(function() {
     $(this).addClass('animated pulse')
   })
 
@@ -36,5 +36,42 @@ $(window).bind('load', function() {
 
   $('.navlink, .logo').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
     $(this).removeClass('animated pulse')
+  });
+
+  $('.projects').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    focusOnSelect: true,
+    asNavFor: '.project-descriptions',
+    prevArrow: '<img src="images/previous-arrow.png" class="previous-arrow">',
+    nextArrow: '<img src="images/next-arrow.png" class="next-arrow">',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  $('.project-descriptions').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.projects'
   });
 })
