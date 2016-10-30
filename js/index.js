@@ -26,7 +26,7 @@ $(window).bind('load', function() {
     }
   })
 
-  $('.navlink, .logo').hover(function() {
+  $('.navlink').hover(function() {
     $(this).addClass('animated pulse')
   })
 
@@ -44,6 +44,8 @@ $(window).bind('load', function() {
     slidesToShow: 3,
     focusOnSelect: true,
     asNavFor: '.project-descriptions',
+    prevArrow: '<img src="images/previous-arrow.png" class="previous-arrow">',
+    nextArrow: '<img src="images/next-arrow.png" class="next-arrow">',
     responsive: [
       {
         breakpoint: 768,
