@@ -38,6 +38,19 @@ $(window).bind('load', function() {
     $(this).removeClass('animated pulse')
   });
 
+  var targetOffset = $(".main").offset().top;
+  var $w = $(window).scroll(function() {
+   
+    if ($w.scrollTop() > targetOffset) {
+      $('.fixed-navbar').removeClass('fixed-navbar-start')
+      $('.fixed-navbar').addClass('visible').removeClass('hidden')
+    }
+    else {
+      $('.fixed-navbar').removeClass('visible').addClass('hidden')
+    }
+
+  })
+
   $('.projects').slick({
     centerMode: true,
     centerPadding: '0px',
