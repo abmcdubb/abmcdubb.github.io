@@ -1,5 +1,4 @@
 $(window).bind('load', function() {
-  // $('.preloading').fadeOut()
   $(".preloading").effect("blind", {direction: "down"});
   $('.show-after-load').show(); 
 
@@ -38,17 +37,21 @@ $(window).bind('load', function() {
     $(this).removeClass('animated pulse')
   });
 
-  var targetOffset = $(".main").offset().top;
+  var mainTargetOffset = $(".main").offset().top;
+  var workTargetOffset = $(".recent-work").offset().top - 50;
   var $w = $(window).scroll(function() {
    
-    if ($w.scrollTop() > targetOffset) {
-      $('.fixed-navbar').removeClass('fixed-navbar-start')
-      $('.fixed-navbar').addClass('visible').removeClass('hidden')
+    if ($w.scrollTop() > mainTargetOffset && $w.scrollTop() < workTargetOffset) {
+      $('.fixed-navbar').removeClass('fixed-navbar-start hidden green-logo')
+      $('.fixed-navbar').addClass('visible')
+    }
+    else if ($w.scrollTop() > mainTargetOffset && $w.scrollTop() > workTargetOffset) {
+      $('.fixed-navbar').removeClass('fixed-navbar-start hidden')
+      $('.fixed-navbar').addClass('visible green-logo')
     }
     else {
-      $('.fixed-navbar').removeClass('visible').addClass('hidden')
+      $('.fixed-navbar').removeClass('visible hidden green-logo').addClass('hidden')
     }
-
   })
 
   $('.projects').slick({

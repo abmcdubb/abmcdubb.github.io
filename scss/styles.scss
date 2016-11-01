@@ -161,11 +161,14 @@ body {
     .description {
       text-align: center;
       font-size: 18px;
-      background-color: rgba(55, 79, 51, 0.4);
       border-radius: 5px;
-      color: white;
+      border: 2px solid $dark-green;
+      color: $dark-green;
+      p {
+        margin: 10px;
+      }
       a {
-        color: white;
+        color: $dark-green;
       }
     }
 
@@ -194,6 +197,7 @@ body {
       transition: opacity .1s ease-in-out;
     }
     &.slick-active:not(.slick-current) .screenshot img {
+      filter: grayscale(100%);
       position: relative;
       z-index: -1;
     }
@@ -218,6 +222,10 @@ body {
     img {
       height: 35px;
       margin-right: 15px;
+      transition: transform .8s ease-in-out;
+      &:hover {
+        transform: rotateY(360deg);
+      }
     }
   }
   .social-media-links, .copyright span {
@@ -272,10 +280,15 @@ body {
     display: block; 
     animation: show-fixed-navbar 1s ease 0s 1 normal;
   }
+  &.green-logo {
+    animation: change-to-green 1s ease 0s 1 normal;
+    animation-fill-mode: forwards;
+  }
   &.hidden {
     animation: hide-fixed-navbar 1s;
     animation-fill-mode: forwards;
   }
+
   a {
     color: $medium-grey;
   }
@@ -294,9 +307,8 @@ body {
 }
 
 @keyframes show-fixed-navbar {
-  0%   { transform: translate(105px, 0px) scale(0.1, 0.1); }
-  50%  { transform: translate(0px, 0px); }
-  75%  { transform: rotateX(180deg); }
+  0%   { transform: scale(0.1, 0.1); }
+  50%  { transform: rotateX(180deg); }
   100%  { transform: rotateX(360deg); }
 }
 
@@ -305,4 +317,11 @@ body {
   25%   { transform: rotateX(-180deg) scale(0.7, 0.7); opacity: 0.5;}
   75%   { transform: rotateX(-270deg) scale(0.3, 0.3); opacity: 0.3;}
   100%  { transform: rotateX(-360deg); opacity: 0; visibility: hidden;}
+}
+
+@keyframes change-to-green {
+  0%   { transform: rotateX(-90deg); opacity: 0.2; border: 5px solid $dark-green; color: $dark-green; }
+  25%  { transform: rotateX(-180deg); opacity: 0.4; border: 5px solid $dark-green; color: $dark-green; }
+  75%  { transform: rotateX(-270deg); opacity: 0.7; border: 5px solid $dark-green; color: $dark-green; }
+  100%  { transform: rotateX(-360deg); opacity: 1; border: 5px solid $dark-green; color: $dark-green;}
 }
