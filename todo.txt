@@ -5,7 +5,6 @@ todo.txt
 - Allow nav bar to move with scroll
 - Allow for side scroll for projects section
 - Allow for click to expand image for project section
-- Make projects section feel less crowded
 - Add favicon
 - Complete / figure out blog page
 - Slow scroll when switching sections

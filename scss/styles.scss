@@ -48,9 +48,6 @@ body {
 
 .home-page .main-image {
   background: url("../images/main.jpg") no-repeat center center;
-  -webkit-background-size: cover; //fix this!
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   height: 1000px;
 }
@@ -143,8 +140,6 @@ body {
     transform: translate(0, -50%);
     cursor: pointer;
     animation: floating-arrow .5s ease-in-out 0s infinite alternate;
-    -moz-animation: floating-arrow .5s ease-in-out 0s infinite alternate;
-    -webkit-animation: floating-arrow .5s ease-in-out 0s infinite alternate;
   }
   .next-arrow {
     right: 0px;
@@ -178,8 +173,6 @@ body {
     padding: 5px 15px;
     transition-duration: .5s;
     &.slick-center {
-      -webkit-transform: scale(1.5); 
-      -ms-transform: scale(1.5); 
       transform: scale(1.5);
       transition-duration: 1s;
     }
@@ -238,9 +231,6 @@ body {
 // BLOG PAGE
 .blog-page .main-image {
   background: url("../images/wip.jpg") no-repeat center center;
-  -webkit-background-size: cover; //fix this!
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   height: 1000px;
 }
@@ -250,14 +240,6 @@ body {
   padding-top: 10%;
 }
 // animations
-@-moz-keyframes floating-arrow {
-  from { transform: translate(0px,0px); }
-  to { transform: translate(0px,-2px); } 
-}
-@-webkit-keyframes floating-arrow {
-  from { transform: translate(0px,0px); }
-  to { transform: translate(0px,-2px); } 
-}
 @keyframes floating-arrow {
   from { transform: translate(0px,0px); }
   to { transform: translate(0px,-2px); } 
