@@ -22,11 +22,11 @@
     <div class="preloading">
       <div class="loading-text">Loading ...</div>
     </div>
-    <div class="fixed-navbar fixed-navbar-start">
-      <span class='fixed-navbar-first-name-text'>alisha</span>
-      <span class='fixed-navbar-last-name-text'>Mc</span>
-    </div>
-    <div class="main-image">
+    <div class="section" id="main">
+      <div class="fixed-navbar fixed-navbar-start">
+        <span class='fixed-navbar-first-name-text'>alisha</span>
+        <span class='fixed-navbar-last-name-text'>Mc</span>
+      </div>
       <div class="navbar">
         <div class="logo">
           <a name="blog" href="./index.html">alisha b. mcwilliams</a>
@@ -56,88 +56,67 @@
         </div>
       </div>
     </div>
-    <div class="recent-work show-after-load">
-      <span class="section-title">recent work</span>
-      <a name="projects"></a>
-      <div class="projects">
+    <a name="projects"></a>
+    <div class="projects recent-work show-after-load"> 
+      <div class="section" id="#2">   
         <div class="project">
-          <div class="screenshot">
-            <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank">
-              <img src="images/pokemongo_tweets_screenshot.gif">
-            </a>
-          </div>   
-        </div>
-        <div class="project">
-          <div class="screenshot">
-            <a href="https://alishamcwilliams.com" target="_blank">
-              <img src="images/alishamcwilliamsdotcom_screenshot.png">
-            </a>
-          </div>   
-        </div>
-        <div class="project">       
-          <div class="screenshot">
-            <a href="https://github.com/abmcdubb/nyborhood" target="_blank">
-              <img src="images/nyborhood_screenshot.png">
-            </a>
-          </div>
-        </div>
-        <div class="project">
-          <div class="screenshot">
-            <a href="https://github.com/abmcdubb/troop_hub" target="_blank">
-              <img src="images/troophub_screenshot.png">
-            </a>
-          </div>
-          
-        </div>
-        <div class="project">
-          <div class="screenshot">
-            <a href="https://github.com/bokwon/berf" target="_blank">
-              <img src="images/berf_screenshot.png">
-            </a>
-          </div>
+          <div class="project-name">Pokemongo Tweets</div>
+          <div class="project-information">
+            <div class="project-screenshot pokemon-tweets-image">
+              <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank">
+                <img src="images/pokemongo_tweets_screenshot.gif">
+              </a>
+            </div>
+            <div class="project-description">
+              <p>
+                <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank" class="site-name"><b>Pokemongo Tweets</b></a> is a tweet streaming app which tracks real-time tweets referring to the names of any one of the 150 original Pokemon.
+              </p>          
+              <p>
+                <i>Built with the Twitter Streaming API, Sinatra, Mithril, HTML, and CSS</i>.
+              </p>
+            </div>
+          </div>     
         </div>
       </div>
-      <div class="project-descriptions">
-        <div class="description">
-          <p>
-            <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank" class="site-name"><b>Pokemongo Tweets</b></a> is a tweet streaming app which tracks real-time tweets referring to the names of any one of the 150 original Pokemon.
-          </p>          
-          <p>
-            <i>Built with the Twitter Streaming API, Sinatra, Mithril, HTML, and CSS</i>.
-          </p>
+      <div class="section" id="#3">
+        <div class="project">
+          <div class="project-name">alishamcwilliams.com</div>
+          <div class="project-information">
+            <div class="project-screenshot alisha-mcwilliams-image">
+              <a href="https://alishamcwilliams.com" target="_blank">
+                <img src="images/alishamcwilliamsdotcom_screenshot.png">
+              </a>
+            </div>
+            <div class="project-description">
+              <p>
+                <a href="https://alishamcwilliams.com" target="_blank" class="site-name"><b>alishamcwilliams.com</b></a> is my personal website, and a starting point for the lazier internet stalkers.
+              </p>          
+              <p>
+                <i>Designed by Jane Wang. Built with HTML, SASS, and Susy</i>.
+              </p>
+            </div>
+          </div>     
         </div>
-        <div class="description">
-          <p>
-            <a href="https://alishamcwilliams.com" target="_blank" class="site-name"><b>alishamcwilliams.com</b></a> is my personal website, and a starting point for the lazier internet stalkers.
-          </p>          
-          <p>
-            <i>Designed by Jane Wang. Built with HTML, SASS, and Susy</i>.
-          </p>
+      </div>
+      <div class="section" id="#4">
+        <div class="project">
+          <div class="project-name">NYborhood</div>
+          <div class="project-information">
+            <div class="project-screenshot nyborhood-image">
+              <a href="https://github.com/abmcdubb/nyborhood" target="_blank">
+                <img src="images/nyborhood_screenshot.png">
+              </a>
+            </div>
+            <div class="project-description">
+              <p>
+                <a href="https://github.com/abmcdubb/nyborhood" target="_blank" class="site-name"><b>NYborhood</b></a> compiles New York City 311 data to compile relevant data on local buildings and neighborhoods.
+              </p>
+              <p>
+                <i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i>
+              </p>
+            </div>
+          </div>     
         </div>
-        <div class="description">
-          <p>
-            <a href="https://github.com/abmcdubb/nyborhood" target="_blank" class="site-name"><b>NYborhood</b></a> compiles New York City 311 data to compile relevant data on local buildings and neighborhoods.
-          </p>
-          <p>
-            <i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i>
-          </p>
-        </div>
-        <div class="description">
-          <p>
-            <a href="https://github.com/abmcdubb/troop_hub" target="_blank" class="site-name"><b>Troophub</b></a> serves as a portal for Girl Scout troops to share and disseminate relevant data to troop members and parents.
-          </p>
-          <p>
-            <i>Built with Ruby on Rails, Postgres SQL, jQuery, and Twitter Bootstrap</i>.
-          </p>
-        </div>
-        <div class="description">
-          <p>
-            <a href="https://github.com/bokwon/berf" target="_blank" class="site-name"><b>Berf</b></a> scans a user's Facebook friends and auto-sends celebratory texts on their birthday.
-          </p>
-          <p>
-            <i>Built with Ruby on Rails, Postgres SQL, Twilio, jQuery, and Twitter Bootstrap.</i>
-          </p>
-        </div>    
       </div>
     </div>
     <div class="footer">
