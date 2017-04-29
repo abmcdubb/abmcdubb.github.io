@@ -3,9 +3,23 @@
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 $light-grey: #CDDDE0;
-$dark-green: #374F33;
+// $dark-green: #374F33;
 $medium-grey: #7C859B;
 $white: #FFFFFF;
+$burgundy-red: #550000;
+// $med-pink: #FFAAAA;
+$light-pink: #ffdede;
+// $light-green: #D4EE9F;
+$light-green: #deffde;
+
+// $med-blue: #669999;
+$light-blue: #deefff;
+$beige: #d2c8c8;
+
+@mixin background-color($color) {
+  background-color: $color !important;
+  transition: background-color .5s ease;
+}
 
 $susy: (
   columns: 12,
@@ -14,8 +28,15 @@ $susy: (
   debug: (image: show-columns)
   );
 body {
-  color: $dark-green;
-  font-family: Lato;
+  background: $burgundy-red;
+  color: $burgundy-red;
+  // font-family: Lato;
+  // font-family: 'Barrio', cursive;
+  // font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: 'Allerta Stencil', sans-serif;
+  // font-family: 'Codystar', cursive;
+  // font-family: 'Bungee Hairline', cursive;
+  // font-family: 'Averia Gruesa Libre', cursive;
   a {
     text-decoration: none;
     &:visited {
@@ -25,16 +46,6 @@ body {
      text-decoration: none;
     }
   }
-}
-
-// HOME PAGE
-.section {
-  height: 100vh;
-}
-#main.section {
-  background: url("../images/main.jpg") no-repeat center center;
-  background-size: cover;
-  min-height: 100%;
 }
 .preloading {
   position: fixed;
@@ -53,101 +64,130 @@ body {
   }
 }
 
-.navbar {
-  @include span(12);
-  height: 76px;
-  margin-bottom: 10vh;
-  background: $white;
-  opacity: 0.7;
+// HOME PAGE
+.section {
+  height: 100vh;
 }
-.logo{
-  @include span(6 of 12);
-  font-size: 26pt;
-  margin-left: 50px;
-  position: relative;
-  top: 20%;
-  color: $medium-grey;
-  a {
-    color: $medium-grey;
+.intro.section {
+  background: url("../images/me_on_red_background_1.jpg") no-repeat center 100%;
+  background-size: cover;
+  .navbar {
+    height: 10vh;
+    margin-bottom: 10vh;
+    background: $white;
+    opacity: 0.3;
   }
-}
-.navlinks {
-  @include span(5 of 12 last);
-  font-size: 16pt;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  .navlink {
-    display: inline-block;
-    margin-right: 60px;
+  .logo{
+    font-size: 8.5vh;
+    margin-left: 10vh;
+    color: $medium-grey;
     a {
       color: $medium-grey;
     }
   }
-}
-.main-text {
-  margin-left: 20vw;
-  margin-right: 20vw; // might change
-  margin-bottom: 50px;
-  font-size: 4vh;
-  line-height: 6.5vh;
-  letter-spacing: 2px;
-  &.blog {
-    margin-left: 10%;
+  .navlinks {
+    @include span(5 of 12 last);
+    font-size: 4.5vh;
+    // position: relative;
+    // top: 50%;
+    transform: translateY(-50%);
+    .navlink {
+      display: inline-block;
+      margin-right: 60px;
+      a {
+        color: $medium-grey;
+      }
+    }
   }
-  .introduction-text1 {
-    margin: 0;
-  }
-  .introduction-text2 {
-    visibility: hidden;
-  }
-}
-.buttons {
-  margin-left: 20vw;
-  font-size: 10pt;
-  letter-spacing: .40pt;
-  .email-me, .github {
-    background: $dark-green;
-    opacity: 0.5;
+  .main .name {
     display: inline-block;
-    color: #CCC;
-    height: 32px;
-    border-radius: 25px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 7vh;
+    color: $burgundy-red;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    // background: $white;
+    opacity: 1;
+    text-align: center;
   }
-  .email-me {
-    width: 176px;
-    margin-right: 75px;
+  .main-text {
+    // font-family: 'PT Sans Narrow', sans-serif;
+    // font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Questrial', sans-serif;
+    // font-family: 'Josefin Slab', serif;
+    // font-family: 'Righteous', cursive;
+    // font-family: 'Walter Turncoat', cursive;
+    // font-family: 'Pompiere', cursive;
+    // font-family: 'Averia Sans Libre', cursive;
+    font-family: 'Flamenco', cursive;
+    // font-family: 'Short Stack', cursive;
+    display: inline-block;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw; // might change
+    margin-bottom: 50px;
+    font-size: 2vw;
+    line-height: 6.5vh;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+
+    &.blog {
+      margin-left: 10%;
+    }
+    .introduction-text1 {
+      margin: 0;
+    }
+    .introduction-text2 {
+      visibility: hidden;
+    }
   }
-  .github {
-    width: 200px;
-  }
-  .email-me-text, .github-text {
-    color: white;
-    line-height: 32px;
-  }
-  .email-me-text {
-    margin-left: 20px;
-  }
-  .github-text {
-    margin-left: 17px;
+  .buttons {
+    margin-left: 30vw;
+    font-size: 10pt;
+    letter-spacing: .40pt;
+    .email-me, .github {
+      text-align: center;
+      background: $burgundy-red;
+      opacity: 0.5;
+      display: inline-block;
+      color: #CCC;
+      height: 32px;
+      border-radius: 25px;
+    }
+    .email-me {
+      width: 176px;
+      margin-right: 75px;
+    }
+    .github {
+      width: 200px;
+    }
+    .email-me-text, .github-text {
+      color: white;
+      line-height: 32px;
+    }
   }
 }
+
 .projects {
+  color: gray;
   .section {padding: 10vh;}
   .project {
-    border: 2px $dark-green solid;
+    border: 2px gray solid;
     height: 80vh;
     margin-bottom: 10vh;
     .project-name {
-      font-size: 4vh;
-      font-weight: 600;
+      font-size: 6vh;
+      font-weight: 400;
       letter-spacing: 2vh;
       padding: 0 10px;
       margin-top: -3vh;
       left: 20vh;
       position: absolute;
       z-index: 9999;
-      background-color: white;
+      background-color: transparent;
     }
     .project-information {
       display: flex;    
@@ -155,20 +195,31 @@ body {
         margin: 10vh 0 10vh 10vh;
         border-radius: 5px;
         width: 60vw;
-        height: 65vh;
+        height: 60vh;
         img {
-          max-width: 100%;
-          max-height: 100%;
+          max-width: 95%;
+          max-height: 95%;
+        }
+        .built-with {
+          font-family: 'Flamenco', cursive;
+          font-size: 1.5vw;
         }
         &.pokemon-tweets-image img{
           border: 1px black solid;
         }
+        &.alisha-mcwilliams-image {
+          margin: 10vh 10vh 10vh 0;
+        }
       }
       .project-description {
-        font-size: 3.5vh;
+        font-family: 'Flamenco', cursive;
+        font-size: 2.5vw;
         letter-spacing: .4vh;
         padding: 10vh;
         width: 30vw;
+        .site-name {
+          color: gray;
+        }
       }
     }
   }
@@ -203,6 +254,16 @@ body {
     transform: translateY(-50%);
     top: 50%;
   }
+}
+.pink-bkg {
+  @include background-color($light-pink)
+}
+// not blue?
+.blue-bkg {
+  @include background-color(#c5aeb4)
+}
+.beige-bkg {
+  @include background-color($beige)
 }
 
 // BLOG PAGE
@@ -265,6 +326,89 @@ body {
   }
 }
 
+@media only screen and (max-device-width: 360px) {
+  // background-color: red;
+  .intro.section {
+    .navbar {
+      margin-bottom: 1vh;
+      height: 6vh;
+      .nav-links {
+
+      }
+    }
+    .main {
+      .name {
+        font-size: 6.5vh;
+      }
+      .main-text {
+        font-size: 3.5vh;
+        margin-bottom: 0;
+        line-height: 5vh;
+        width: 70vw;
+        margin-left: 20vw;
+        margin-right: 10vw;
+      }
+      .buttons {
+        margin-left: 20vw;
+        a div {
+          height: 6vh;
+          border-radius: 4vh;
+          display: block;
+          width: 70vw;
+          font-size: 3vh;
+          padding-top: 1.5vh;
+          &.email-me {          
+            margin-bottom: 1vh;
+          }
+        }        
+      }
+    }
+  }
+  .projects {
+    .section {
+      padding: 3vh;
+      &.pokemongo-tweets {
+        background-color: $light-pink !important;
+        transition: background-color .5s ease;
+      }
+    }
+    .project {
+      .project-name {
+        font-size: 2.5vh;
+        left: 5vh;
+        letter-spacing: 1vh;
+        margin-top: -1.5vh;
+      }
+      .project-information {
+        display: block;
+        .project-screenshot {
+          width: 80vw;
+          margin: 2.5vh;
+          height: auto;
+          a img {
+            width: 100%;
+            max-width: 100%;
+          }
+          .built-with {
+            font-size: 3vh;
+            margin-top: 2.5vh;
+            padding: 2.5vh;
+            border: 1px $medium-grey solid;
+            text-align: center;
+          }
+        }
+        .project-description {
+          font-size: 3.5vh;
+          margin: 2.5vh;
+          padding: 0;
+          width: 80vw;
+          text-align: center;
+        }
+      }      
+    }
+  }
+}
+
 @keyframes show-fixed-navbar {
   0%   { transform: scale(0.1, 0.1); }
   50%  { transform: rotateX(180deg); }
@@ -279,8 +423,8 @@ body {
 }
 
 @keyframes change-to-green {
-  0%   { transform: rotateX(-90deg); opacity: 0.2; border: 5px solid $dark-green; color: $dark-green; }
-  25%  { transform: rotateX(-180deg); opacity: 0.4; border: 5px solid $dark-green; color: $dark-green; }
-  75%  { transform: rotateX(-270deg); opacity: 0.7; border: 5px solid $dark-green; color: $dark-green; }
-  100%  { transform: rotateX(-360deg); opacity: 1; border: 5px solid $dark-green; color: $dark-green;}
+  0%   { transform: rotateX(-90deg); opacity: 0.2; border: 5px solid $burgundy-red; color: $burgundy-red; }
+  25%  { transform: rotateX(-180deg); opacity: 0.4; border: 5px solid $burgundy-red; color: $burgundy-red; }
+  75%  { transform: rotateX(-270deg); opacity: 0.7; border: 5px solid $burgundy-red; color: $burgundy-red; }
+  100%  { transform: rotateX(-360deg); opacity: 1; border: 5px solid $burgundy-red; color: $burgundy-red;}
 }

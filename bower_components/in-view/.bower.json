@@ -1,0 +1,14 @@
+{
+  "name": "in-view",
+  "homepage": "https://github.com/camwiegert/in-view",
+  "_release": "b6389d348d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b6389d348df8b172c80f48ab554086333afcf03a"
+  },
+  "_source": "https://github.com/camwiegert/in-view.git",
+  "_target": "*",
+  "_originalSource": "in-view",
+  "_direct": true
+}

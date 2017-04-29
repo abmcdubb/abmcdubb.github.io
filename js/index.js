@@ -1,6 +1,6 @@
 $(window).bind('load', function() {
   if ($('.home-page').length) {
-    $(".preloading").effect("blind", {direction: "down"});
+    $(".preloading").effect("blind", { direction: "down" });
     $('.show-after-load').show(); 
 
     $('.main-text .introduction-text1').textillate({
@@ -25,6 +25,11 @@ $(window).bind('load', function() {
         }
       }
     })
+
+    if (screen.width <= 360) {
+      $('.home-page').addClass('something')
+    }
+
     var mainTargetOffset = $(".main").offset().top;
     var workTargetOffset = $(".recent-work").offset().top - 90;
     var $w = $(window).scroll(function() {
@@ -41,43 +46,6 @@ $(window).bind('load', function() {
         $('.fixed-navbar').removeClass('visible hidden green-logo').addClass('hidden')
       }
     })
-
-    // $('.projects').slick({
-    //   centerMode: true,
-    //   centerPadding: '0px',
-    //   slidesToShow: 3,
-    //   focusOnSelect: true,
-    //   asNavFor: '.project-descriptions',
-    //   prevArrow: '<img src="images/previous-arrow.png" class="previous-arrow">',
-    //   nextArrow: '<img src="images/next-arrow.png" class="next-arrow">',
-    //   responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         arrows: false,
-    //         centerMode: true,
-    //         centerPadding: '40px',
-    //         slidesToShow: 3
-    //       }
-    //     },
-    //     {
-    //       breakpoint: 480,
-    //       settings: {
-    //         arrows: false,
-    //         centerMode: true,
-    //         centerPadding: '40px',
-    //         slidesToShow: 1
-    //       }
-    //     }
-    //   ]
-    // });
-    // $('.project-descriptions').slick({
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   arrows: false,
-    //   fade: true,
-    //   asNavFor: '.projects'
-    // });
   };
 
   $('.navlink').hover(function() {
@@ -87,4 +55,26 @@ $(window).bind('load', function() {
   $('.navlink, .logo').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
     $(this).removeClass('animated pulse')
   }); 
+
+  if (!$('body').hasClass('something')) {
+    inView.threshold(0.10);
+    inView('.pokemongo-tweets')
+      .on('enter', function(el) {
+        $(el).find('.project-name').addClass('pink-bkg');
+        $(el).addClass('pink-bkg');
+      });
+    inView('.nyborhood')
+      .on('enter', function(el) {
+        $(el).find('.project-name').addClass('blue-bkg');
+        $(el).addClass('blue-bkg');
+      });
+    inView('.me-dot-com')
+      .on('enter', function(el) {
+        $(el).find('.project-name').addClass('beige-bkg');
+        $(el).addClass('beige-bkg');        
+      });
+    };
+
+    // $('body').panelSnap({panelSelector: '.section', slideSpeed: 200});
+
 })

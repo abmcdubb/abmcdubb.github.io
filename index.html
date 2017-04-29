@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us" dir='ltr'>
 <head>
   <meta charset="UTF-8">
   <title>Alisha McWilliams dot com</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link href="https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre|Barrio|Bungee+Hairline|Codystar|Princess+Sofia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Athiti|Averia+Sans+Libre|Cagliostro|Dorsa|Flamenco|Happy+Monkey|Josefin+Sans|Josefin+Slab|Julius+Sans+One|Just+Another+Hand|Lobster+Two|Marvel|Maven+Pro|McLaren|Montserrat+Subrayada|Nova+Oval|Oldenburg|PT+Sans+Narrow|Poiret+One|Pompiere|Port+Lligat+Slab|Questrial|Righteous|Short+Stack|Text+Me+One|Ubuntu+Condensed|Unica+One|Walter+Turncoat" rel="stylesheet">
   <!-- replace animate -->
   <link rel="stylesheet" href="bower_components/textillate/assets/animate.css"> 
-  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
-
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+  <script type="text/javascript" src="bower_components/panelsnap/jquery.panelSnap.js"></script>
   <script type="text/javascript" src="bower_components/textillate/assets/jquery.lettering.js"></script>
   <script type="text/javascript" src="bower_components/textillate/jquery.textillate.js"></script>
+  <script type="text/javascript" src="bower_components/in-view/dist/in-view.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
 </head>
@@ -22,35 +22,36 @@
     <div class="preloading">
       <div class="loading-text">Loading ...</div>
     </div>
-    <div class="section" id="main">
-      <div class="fixed-navbar fixed-navbar-start">
+    <div class="section intro">      
+      <!-- <div class="fixed-navbar fixed-navbar-start">
         <span class='fixed-navbar-first-name-text'>alisha</span>
         <span class='fixed-navbar-last-name-text'>Mc</span>
-      </div>
+      </div> -->
       <div class="navbar">
         <div class="logo">
-          <a name="blog" href="./index.html">alisha b. mcwilliams</a>
+          <a name="" href="./index.html"></a>
         </div>
-        <div class="navlinks show-after-load">
+<!--         <div class="navlinks show-after-load">
           <div class="about navlink"><a name="about" href="#main-text">about</a></div>
           <div class="nav-projects navlink"><a name "projects" href="#projects">projects</a></div>
           <div class="blog navlink"><a name="blog" href="./blog.html">blog</a></div>
-        </div>
+        </div> -->
       </div>
       <div class="main">
+        <span class="name">alisha b. mcwilliams</span>
         <div class="main-text show-after-load">
-          <p class="introduction-text1">Alisha McWilliams is Brooklyn-based Ruby on Rails developer currently working at CipherHealth.</p>
+          <p class="introduction-text1">Alisha is a Brooklyn-based Ruby on Rails developer currently working at CipherHealth.</p>
           <p class="introduction-text2">She is also an amateur jewelry maker, sloth enthusiast, photographer, frequent traveler, and weekend volunteer. She is constantly working to turn her black thumb green, one dead houseplant at a time.</p>
         </div>
         <div class="buttons show-after-load">
           <a href="mailto:abmcwilliams@gmail.com">
             <div class="email-me">
-              <span class="email-me-text">SEND ME AN EMAIL</span>
+              <span class="email-me-text">email me</span>
             </div>
           </a>
           <a href="https://github.com/abmcdubb" target="_blank">
             <div class="github">
-              <span class="github-text">VIEW WORK ON GITHUB</span>
+              <span class="github-text">visit me on github</span>
             </div>
           </a>
         </div>
@@ -58,7 +59,7 @@
     </div>
     <a name="projects"></a>
     <div class="projects recent-work show-after-load"> 
-      <div class="section" id="#2">   
+      <div class="section pokemongo-tweets">   
         <div class="project">
           <div class="project-name">Pokemongo Tweets</div>
           <div class="project-information">
@@ -66,39 +67,39 @@
               <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank">
                 <img src="images/pokemongo_tweets_screenshot.gif">
               </a>
+              <div class="built-with">
+                <p><i> Built with the Twitter Streaming API, Sinatra, Mithril, HTML, and CSS</i></p>
+              </div>
             </div>
             <div class="project-description">
               <p>
                 <a href="https://github.com/abmcdubb/pokemongo-tweets" target="_blank" class="site-name"><b>Pokemongo Tweets</b></a> is a tweet streaming app which tracks real-time tweets referring to the names of any one of the 150 original Pokemon.
               </p>          
-              <p>
-                <i>Built with the Twitter Streaming API, Sinatra, Mithril, HTML, and CSS</i>.
-              </p>
             </div>
           </div>     
         </div>
       </div>
-      <div class="section" id="#3">
+      <div class="section me-dot-com">
         <div class="project">
           <div class="project-name">alishamcwilliams.com</div>
           <div class="project-information">
-            <div class="project-screenshot alisha-mcwilliams-image">
-              <a href="https://alishamcwilliams.com" target="_blank">
-                <img src="images/alishamcwilliamsdotcom_screenshot.png">
-              </a>
-            </div>
             <div class="project-description">
               <p>
                 <a href="https://alishamcwilliams.com" target="_blank" class="site-name"><b>alishamcwilliams.com</b></a> is my personal website, and a starting point for the lazier internet stalkers.
               </p>          
-              <p>
-                <i>Designed by Jane Wang. Built with HTML, SASS, and Susy</i>.
-              </p>
             </div>
+            <div class="project-screenshot alisha-mcwilliams-image">
+              <a href="https://alishamcwilliams.com" target="_blank">
+                <img src="images/alishamcwilliamsdotcom_screenshot.png">
+              </a>
+              <div class="built-with">
+                <p><i>Designed by Jane Wang. Built with HTML, SASS, and Susy</i></p>
+              </div> 
+            </div>      
           </div>     
         </div>
       </div>
-      <div class="section" id="#4">
+      <div class="section nyborhood">
         <div class="project">
           <div class="project-name">NYborhood</div>
           <div class="project-information">
@@ -106,13 +107,13 @@
               <a href="https://github.com/abmcdubb/nyborhood" target="_blank">
                 <img src="images/nyborhood_screenshot.png">
               </a>
+              <div class="built-with">
+                <p><i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i></p>
+              </div>   
             </div>
             <div class="project-description">
               <p>
                 <a href="https://github.com/abmcdubb/nyborhood" target="_blank" class="site-name"><b>NYborhood</b></a> compiles New York City 311 data to compile relevant data on local buildings and neighborhoods.
-              </p>
-              <p>
-                <i>Built with Ruby on Rails, MongoDB, and Twitter Bootstrap.</i>
               </p>
             </div>
           </div>     
@@ -134,3 +135,5 @@
     </div>
   </body>
 </html>
+
+<!-- http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF -->
