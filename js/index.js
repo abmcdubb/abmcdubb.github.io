@@ -56,7 +56,7 @@ $(window).bind('load', function() {
     $(this).removeClass('animated pulse')
   }); 
 
-  if (!$('body').hasClass('something')) {
+  if (!$('body').hasClass('section')) {
     inView.threshold(0.10);
     inView('.pokemongo-tweets')
       .on('enter', function(el) {
@@ -65,8 +65,8 @@ $(window).bind('load', function() {
       });
     inView('.nyborhood')
       .on('enter', function(el) {
-        $(el).find('.project-name').addClass('blue-bkg');
-        $(el).addClass('blue-bkg');
+        $(el).find('.project-name').addClass('purpleish-bkg');
+        $(el).addClass('purpleish-bkg');
       });
     inView('.me-dot-com')
       .on('enter', function(el) {
@@ -74,7 +74,7 @@ $(window).bind('load', function() {
         $(el).addClass('beige-bkg');        
       });
     };
-
-    // $('body').panelSnap({panelSelector: '.section', slideSpeed: 200});
+    // I'm not sure about this, but it's fine until i make up my mind
+    $('body').panelSnap({panelSelector: '.section', slideSpeed: 200});
 
 })

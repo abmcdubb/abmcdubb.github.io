@@ -3,18 +3,13 @@
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 $light-grey: #CDDDE0;
-// $dark-green: #374F33;
 $medium-grey: #7C859B;
 $white: #FFFFFF;
 $burgundy-red: #550000;
-// $med-pink: #FFAAAA;
 $light-pink: #ffdede;
-// $light-green: #D4EE9F;
 $light-green: #deffde;
-
-// $med-blue: #669999;
-$light-blue: #deefff;
 $beige: #d2c8c8;
+$purpleish-beige: #c5aeb4;
 
 @mixin background-color($color) {
   background-color: $color !important;
@@ -30,13 +25,7 @@ $susy: (
 body {
   background: $burgundy-red;
   color: $burgundy-red;
-  // font-family: Lato;
-  // font-family: 'Barrio', cursive;
-  // font-family: 'Montserrat Subrayada', sans-serif;
   font-family: 'Allerta Stencil', sans-serif;
-  // font-family: 'Codystar', cursive;
-  // font-family: 'Bungee Hairline', cursive;
-  // font-family: 'Averia Gruesa Libre', cursive;
   a {
     text-decoration: none;
     &:visited {
@@ -88,8 +77,6 @@ body {
   .navlinks {
     @include span(5 of 12 last);
     font-size: 4.5vh;
-    // position: relative;
-    // top: 50%;
     transform: translateY(-50%);
     .navlink {
       display: inline-block;
@@ -108,21 +95,11 @@ body {
     position: absolute;
     height: 100vh;
     left: 0;
-    // background: $white;
     opacity: 1;
     text-align: center;
   }
   .main-text {
-    // font-family: 'PT Sans Narrow', sans-serif;
-    // font-family: 'Josefin Sans', sans-serif;
-    // font-family: 'Questrial', sans-serif;
-    // font-family: 'Josefin Slab', serif;
-    // font-family: 'Righteous', cursive;
-    // font-family: 'Walter Turncoat', cursive;
-    // font-family: 'Pompiere', cursive;
-    // font-family: 'Averia Sans Libre', cursive;
     font-family: 'Flamenco', cursive;
-    // font-family: 'Short Stack', cursive;
     display: inline-block;
     width: 60vw;
     margin-left: 20vw;
@@ -258,9 +235,9 @@ body {
 .pink-bkg {
   @include background-color($light-pink)
 }
-// not blue?
-.blue-bkg {
-  @include background-color(#c5aeb4)
+// i could think of a better name for this color
+.purpleish-bkg {
+  @include background-color($purpleish-beige)
 }
 .beige-bkg {
   @include background-color($beige)
@@ -277,11 +254,7 @@ body {
   margin-left: 10%;
   padding-top: 10%;
 }
-// animations
-@keyframes floating-arrow {
-  from { transform: translate(0px,0px); }
-  to { transform: translate(0px,-2px); } 
-}
+
 .fixed-navbar-start {
   display: none;
 }
@@ -308,7 +281,6 @@ body {
     animation: hide-fixed-navbar 1s;
     animation-fill-mode: forwards;
   }
-
   a {
     color: $medium-grey;
   }
@@ -327,14 +299,10 @@ body {
 }
 
 @media only screen and (max-device-width: 360px) {
-  // background-color: red;
   .intro.section {
     .navbar {
       margin-bottom: 1vh;
       height: 6vh;
-      .nav-links {
-
-      }
     }
     .main {
       .name {
@@ -370,6 +338,21 @@ body {
       &.pokemongo-tweets {
         background-color: $light-pink !important;
         transition: background-color .5s ease;
+      }
+      &.me-dot-com {
+        .project {
+          .project-information {
+            display: flex;
+            flex-direction: column;
+            .project-description {
+              order: 2;
+            }
+            .project-screenshot {
+              order: 1;
+              margin: 50px auto;
+            }
+          }
+        }
       }
     }
     .project {
@@ -409,22 +392,23 @@ body {
   }
 }
 
-@keyframes show-fixed-navbar {
-  0%   { transform: scale(0.1, 0.1); }
-  50%  { transform: rotateX(180deg); }
-  100%  { transform: rotateX(360deg); }
-}
+// removed the fixed navbar for now, but it may return
+// @keyframes show-fixed-navbar {
+//   0%   { transform: scale(0.1, 0.1); }
+//   50%  { transform: rotateX(180deg); }
+//   100%  { transform: rotateX(360deg); }
+// }
 
-@keyframes hide-fixed-navbar {
-  0%   { transform: rotateX(-90deg); opacity: 0.7;}
-  25%   { transform: rotateX(-180deg) scale(0.7, 0.7); opacity: 0.5;}
-  75%   { transform: rotateX(-270deg) scale(0.3, 0.3); opacity: 0.3;}
-  100%  { transform: rotateX(-360deg); opacity: 0; visibility: hidden;}
-}
+// @keyframes hide-fixed-navbar {
+//   0%   { transform: rotateX(-90deg); opacity: 0.7;}
+//   25%   { transform: rotateX(-180deg) scale(0.7, 0.7); opacity: 0.5;}
+//   75%   { transform: rotateX(-270deg) scale(0.3, 0.3); opacity: 0.3;}
+//   100%  { transform: rotateX(-360deg); opacity: 0; visibility: hidden;}
+// }
 
-@keyframes change-to-green {
-  0%   { transform: rotateX(-90deg); opacity: 0.2; border: 5px solid $burgundy-red; color: $burgundy-red; }
-  25%  { transform: rotateX(-180deg); opacity: 0.4; border: 5px solid $burgundy-red; color: $burgundy-red; }
-  75%  { transform: rotateX(-270deg); opacity: 0.7; border: 5px solid $burgundy-red; color: $burgundy-red; }
-  100%  { transform: rotateX(-360deg); opacity: 1; border: 5px solid $burgundy-red; color: $burgundy-red;}
-}
+// @keyframes change-to-green {
+//   0%   { transform: rotateX(-90deg); opacity: 0.2; border: 5px solid $burgundy-red; color: $burgundy-red; }
+//   25%  { transform: rotateX(-180deg); opacity: 0.4; border: 5px solid $burgundy-red; color: $burgundy-red; }
+//   75%  { transform: rotateX(-270deg); opacity: 0.7; border: 5px solid $burgundy-red; color: $burgundy-red; }
+//   100%  { transform: rotateX(-360deg); opacity: 1; border: 5px solid $burgundy-red; color: $burgundy-red;}
+// }
